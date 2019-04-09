@@ -6,6 +6,8 @@ require('./app/routes/query')(app, "/query",
 
 require('./app/routes/query')(app, "/querytres",
                               "SELECT * FROM Usuario");
+require('./app/routes/query')(app, "/itens",
+                              "SELECT * FROM Item");
 
 
 app.listen(porta);
