@@ -8,7 +8,12 @@ require('./app/routes/query')(app, "/querytres",
                               "SELECT * FROM Usuario");
 require('./app/routes/query')(app, "/items",
                               "SELECT * FROM Item");
-
+require('./app/routes/query')(app, "/clientsJuridico",
+                              "SELECT nome FROM Cliente where DTYPE = ClienteJuridico");
+require('./app/routes/query')(app, "/clientsFisico",
+                              "SELECT nome FROM Cliente where DTYPE = Pessoa");
+require('./app/routes/query')(app, "/clientsArquiteto",
+                              "SELECT nome FROM Cliente where DTYPE = Arquiteto");
 
 app.listen(porta);
 /*app.listen(3000, function(){
