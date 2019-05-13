@@ -9,11 +9,11 @@ require('./app/routes/query')(app, "/querytres",
 require('./app/routes/query')(app, "/items",
                               "SELECT * FROM Item");
 require('./app/routes/query')(app, "/clientsJuridico",
-                              "SELECT nome FROM Cliente where DTYPE = ClienteJuridico");
+                              "SELECT nome FROM Cliente where Cliente.DTYPE = 'ClienteJuridico'");
 require('./app/routes/query')(app, "/clientsFisico",
-                              "SELECT nome FROM Cliente where DTYPE = Pessoa");
+                              "SELECT nome FROM Cliente where Cliente.DTYPE = 'Pessoa'");
 require('./app/routes/query')(app, "/clientsArquiteto",
-                              "SELECT nome FROM Cliente where DTYPE = Arquiteto");
+                              "SELECT nome FROM Cliente where Cliente.DTYPE = 'Arquiteto'");
 
 app.listen(porta);
 /*app.listen(3000, function(){
