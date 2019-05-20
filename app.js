@@ -15,6 +15,7 @@ require('./app/routes/query')(app, "/clientsFisico",
 require('./app/routes/query')(app, "/clientsArquiteto",
                               "SELECT nome FROM Cliente where Cliente.DTYPE = 'Arquiteto'");
 require('./app/routes/queryClients')(app,"clientEmpresa");
+require('./app/routes/queryVendors')(app,"vendor");
 
 app.listen(porta);
 /*app.listen(3000, function(){
